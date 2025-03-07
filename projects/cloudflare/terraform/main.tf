@@ -4,7 +4,7 @@ terraform {
     organization = "rondon-sarnik"
 
     workspaces {
-      name = "name-app"
+      name = "mtd-app"
     }
   }
 
@@ -26,7 +26,7 @@ provider "cloudflare" {
 
 resource "cloudflare_workers_script" "score_backend" {
   account_id = "4180cebb0f75e57d434f27a622da70f0"
-  name       = "name-app"
+  name       = "mtd-app"
   compatibility_date = "2024-01-01"
   module     = true
   content    = file("main.js")
