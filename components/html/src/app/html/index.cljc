@@ -27,7 +27,48 @@
         "mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8"}
        "In order to get moving fast select what you need and we&#39;ll get in touch."]
       [:div
-       {:class "mt-6 flex max-w-md gap-x-4"}
+       {:class "mt-8 flex flex-col items-center justify-center"}
+       [:div {:class "space-y-3"}
+        [:label
+         {:class "flex items-start space-x-3 cursor-pointer"}
+         [:input
+          {:type "checkbox",
+           :class
+           "h-5 w-5 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"}]
+         [:span
+          {:class "text-gray-900"}
+          [:span {:class "font-semibold"} "New comments"]
+          [:span
+           {:class "text-gray-500"}
+           "so you always know what&#39;s happening."]]]
+        [:label
+         {:class "flex items-start space-x-3 cursor-pointer"}
+         [:input
+          {:type "checkbox",
+           :checked "",
+           :class
+           "h-5 w-5 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"}]
+         [:span
+          {:class "text-gray-900"}
+          [:span {:class "font-semibold"} "New candidates"]
+          [:span
+           {:class "text-gray-500"}
+           "who apply for any open postings."]]]
+        [:label
+         {:class "flex items-start space-x-3 cursor-pointer"}
+         [:input
+          {:type "checkbox",
+           :checked "",
+           :class
+           "h-5 w-5 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"}]
+         [:span
+          {:class "text-gray-900"}
+          [:span {:class "font-semibold"} "Offers"]
+          [:span
+           {:class "text-gray-500"}
+           "when they are accepted or rejected by candidates."]]]]]
+      [:div
+       {:class "mt-20 flex max-w-md gap-x-4 mx-auto justify-center"}
        [:label {:for "email-address", :class "sr-only"} "Email address"]
        [:input
         {:id "email-address",
