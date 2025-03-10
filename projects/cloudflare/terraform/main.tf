@@ -30,4 +30,12 @@ resource "cloudflare_workers_script" "score_backend" {
   compatibility_date = "2024-01-01"
   module     = true
   content    = file("main.js")
+  bindings = [{
+    name = "DB"
+    type = "d1"
+    id = cloudflare_d1_database.db.id
+  }]
+  depends_on = [
+    cloudflare_d1_database.db
+  ]
 }
