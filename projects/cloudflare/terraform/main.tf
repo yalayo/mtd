@@ -29,6 +29,7 @@ resource "cloudflare_workers_script" "score_backend" {
   script_name = "mtd-app"
   compatibility_date = "2024-01-01"
   content     = file("main.js")
+  content_type = "javascript+module"
   bindings = [{
     name = "DB"
     type = "d1"
